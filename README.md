@@ -1,1 +1,1 @@
-# buyrukoglu.com
+buyrukoglu.com
