@@ -11,10 +11,9 @@
       {{ if $orig }}
         {{ $thumb := $orig.Resize "600x webp q82" }}
         {{ $full  := $orig.Resize "1800x webp q85" }}
-        {{ $caption := .caption | default "" }}
         <a href="{{ $full.RelPermalink }}"
            class="gallery-item"
-           data-glightbox="title: {{ $caption | default .alt }}">
+           data-glightbox="title: {{ .caption | default .alt }}">
           <img src="{{ $thumb.RelPermalink }}"
                alt="{{ .alt }}"
                width="{{ $thumb.Width }}"
