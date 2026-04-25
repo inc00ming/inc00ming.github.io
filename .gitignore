@@ -1,0 +1,11 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Local planning artifacts (specs, plans, brainstorm notes)
+/docs/
