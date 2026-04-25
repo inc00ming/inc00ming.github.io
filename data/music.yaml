@@ -1,0 +1,16 @@
+items:
+  - cover: sample-01.jpg
+    title: "Gnossiennes"
+    artist: "Erik Satie"
+    year: 1893
+    note: ""
+    links:
+      - { label: "Spotify", url: "https://example.com/spotify" }
+      - { label: "YouTube", url: "https://example.com/youtube" }
+  - cover: sample-02.jpg
+    title: "Kind of Blue"
+    artist: "Miles Davis"
+    year: 1959
+    note: "First jazz album I loved."
+    links:
+      - { label: "Spotify", url: "https://example.com/spotify" }
