@@ -16,6 +16,8 @@
                alt="Cover of {{ .title }} by {{ .artist }}"
                width="80" height="80"
                loading="lazy">
+        {{ else }}
+          {{ warnf "music: missing cover asset: assets/music/%s" .cover }}
         {{ end }}
         <div class="music-meta">
           <strong class="music-title">{{ .title }}</strong>
