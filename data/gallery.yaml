@@ -1,0 +1,10 @@
+items:
+  - file: sample-01.jpg
+    alt: "Steel-blue placeholder"
+    caption: "Sample 1 — landscape"
+  - file: sample-02.jpg
+    alt: "Olive-green placeholder"
+    caption: "Sample 2 — portrait"
+  - file: sample-03.jpg
+    alt: "Sienna placeholder"
+    # no caption — image stands alone
