@@ -5,8 +5,9 @@ theme           = "hugo-paper"
 enableRobotsTXT = true
 
 [params]
-  author      = "Furkan Buyrukoğlu"
-  description = ""
+  author       = "Furkan Buyrukoğlu"
+  description  = ""
+  monoDarkIcon = true
 
 [markup]
   [markup.highlight]
