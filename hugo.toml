@@ -1,0 +1,37 @@
+baseURL         = "https://buyrukoglu.com/"
+languageCode    = "en-us"
+title           = "buyrukoglu"
+theme           = "hugo-paper"
+enableRobotsTXT = true
+
+[params]
+  author      = "Furkan Buyrukoğlu"
+  description = ""
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style     = "github"
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[taxonomies]
+  tag = "tags"
+
+[menu]
+  [[menu.main]]
+    name   = "Gallery"
+    url    = "/gallery/"
+    weight = 10
+  [[menu.main]]
+    name   = "Music"
+    url    = "/music/"
+    weight = 20
+  [[menu.main]]
+    name   = "About"
+    url    = "/about/"
+    weight = 30
+  [[menu.main]]
+    name   = "Contact"
+    url    = "/contact/"
+    weight = 40
