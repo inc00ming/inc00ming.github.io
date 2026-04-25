@@ -6,3 +6,10 @@ items:
     note: ""
     links:
       - { label: "YouTube", url: "https://www.youtube.com/watch?v=y2HVJwal7dg" }
+  - cover: memories.jpg
+    title: "Memories"
+    artist: "Adnan Joubran"
+    year: 2025
+    note: ""
+    links:
+      - { label: "YouTube", url: "https://www.youtube.com/watch?v=JGERy36Kb1g" }
