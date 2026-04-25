@@ -7,18 +7,37 @@
 
   <div class="gallery-grid">
     {{ range hugo.Data.gallery.items }}
-      {{ $img := resources.Get (printf "gallery/%s" .file) }}
-      {{ if $img }}
-        <figure class="gallery-item">
-          <img src="{{ $img.RelPermalink }}" alt="{{ .alt }}" loading="lazy">
-          {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
-        </figure>
+      {{ $orig := resources.Get (printf "gallery/%s" .file) }}
+      {{ if $orig }}
+        {{ $thumb := $orig.Resize "600x webp q82" }}
+        {{ $full  := $orig.Resize "1800x webp q85" }}
+        {{ $caption := .caption | default "" }}
+        <a href="{{ $full.RelPermalink }}"
+           class="gallery-item"
+           data-glightbox="title: {{ $caption | default .alt }}">
+          <img src="{{ $thumb.RelPermalink }}"
+               alt="{{ .alt }}"
+               width="{{ $thumb.Width }}"
+               height="{{ $thumb.Height }}"
+               loading="lazy">
+          {{ with .caption }}<span class="gallery-caption">{{ . }}</span>{{ end }}
+        </a>
       {{ else }}
-        <p style="color:red">Missing: assets/gallery/{{ .file }}</p>
+        {{ errorf "gallery: missing asset: assets/gallery/%s" .file }}
       {{ end }}
     {{ end }}
   </div>
 </article>
+
+<link rel="stylesheet" href="/glightbox.min.css">
+<script defer src="/glightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.GLightbox) {
+      GLightbox({ selector: '.gallery-item' });
+    }
+  });
+</script>
 
 <style>
   .gallery-grid {
@@ -27,14 +46,19 @@
     gap: 8px;
     margin-top: 1.5rem;
   }
-  .gallery-item { margin: 0; }
+  .gallery-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
   .gallery-item img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 4px;
   }
-  .gallery-item figcaption {
+  .gallery-caption {
+    display: block;
     margin-top: 0.25rem;
     font-size: 0.875rem;
     opacity: 0.7;
