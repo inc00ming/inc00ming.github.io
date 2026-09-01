@@ -20,3 +20,10 @@ items:
     note: ""
     links:
       - { label: "YouTube", url: "https://www.youtube.com/watch?v=Izq-gDqiA-o" }
+  - cover: dreams.png
+    title: "Dreams"
+    artist: "The Cranberries"
+    year: 1993
+    note: ""
+    links:
+      - { label: "YouTube", url: "https://www.youtube.com/watch?v=k8UZ2KjmFjQ" }
