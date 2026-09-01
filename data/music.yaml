@@ -13,3 +13,10 @@ items:
     note: ""
     links:
       - { label: "YouTube", url: "https://www.youtube.com/watch?v=JGERy36Kb1g" }
+  - cover: migrants.png
+    title: "Migrants"
+    artist: "Federico Albanese"
+    year: 2016
+    note: ""
+    links:
+      - { label: "YouTube", url: "https://www.youtube.com/watch?v=Izq-gDqiA-o" }
